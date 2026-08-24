@@ -90,6 +90,15 @@
 - 补充安全注意事项，例如上电限流、桨叶拆除、高温器件防护等。
 - 对比后续四合一电调项目，总结单体电调向多通道集成迁移时需要注意的问题。
 
+## Documentation Index
+
+- [Source code archive notes](docs/SOURCE_CODE.md)
+- [Source archive manifest](docs/SOURCE_MANIFEST.md)
+- [Firmware usage notes](docs/FIRMWARE_USAGE.md)
+- [Source verification checklist](docs/SOURCE_VERIFICATION.md)
+- [Assessment evidence checklist](docs/ASSESSMENT_EVIDENCE.md)
+- [Project photos](docs/PHOTOS.md)
+- [Open-source evidence index](docs/OPEN_SOURCE_EVIDENCE.md)
 ## Source Code
 
 本仓库已补充源码压缩包 `code/ch32v203-single-esc-source-code.zip`，包含单体无刷电调相关固件源码。源码归档说明、SHA256 校验值和打包边界见 `docs/SOURCE_CODE.md`。
@@ -97,3 +106,4 @@
 ## License
 
 This hardware design is released under CERN Open Hardware Licence Version 2 - Permissive (CERN-OHL-P-2.0). See LICENSE. If firmware is added later, place a separate software license in the firmware directory.
+
