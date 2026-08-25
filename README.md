@@ -2,11 +2,11 @@
 
 ## 项目背景
 
-本项目是一款面向无人机、航模和机器人动力系统的单体无刷电调硬件。它的核心目标很朴素：用相对常见、成本可控、可打样复现的器件，做出一块能在真实电流和真实温升条件下工作的电调板，而不是只停留在原理图上的“看起来能跑”。
+本项目是一块单路无刷电调硬件，面向无人机、航模和机器人动力系统。设计目标是用常见、成本可控、便于打样的器件，做出一块可以实际带载测试的电调板。
 
-项目采用沁恒 CH32V203F8U6 作为主控，FD6288Q 作为三相栅极驱动，HYG015N04 作为功率 MOSFET，支持 4-6S 电池输入。它更适合作为学习和验证无刷电机驱动的基础项目：一方面可以观察三相桥、栅极驱动、供电路径和散热设计之间的关系；另一方面也可以为后续四合一电调、飞控动力系统和机器人执行器供电控制积累经验。
+项目采用 CH32V203F8U6 作为主控，FD6288Q 作为三相栅极驱动，HYG015N04 作为功率 MOSFET，支持 4-6S 电池输入。它适合用来验证三相桥、栅极驱动、供电路径和散热设计，也可以作为后续四合一电调的单通道基础。
 
-做电调很容易在细节上翻车，比如驱动电源不稳、MOSFET 温升过高、烧录点不好用、大电流路径压降明显、地线回流影响 MCU 稳定性等。这个项目的意义正在于把这些硬件工程问题摆到台面上，通过可打开的工程文件和测试记录，让后来者能看到一块电调从设计到验证的完整过程。
+电调调试对细节很敏感，驱动电源、MOSFET 温升、烧录点、大电流路径和地线回流都会影响结果。本仓库保留硬件工程和测试记录，方便后续复查和继续修改。
 
 当前目录包含立创 EDA 专业版硬件工程文件：
 
@@ -90,15 +90,15 @@
 - 补充安全注意事项，例如上电限流、桨叶拆除、高温器件防护等。
 - 对比后续四合一电调项目，总结单体电调向多通道集成迁移时需要注意的问题。
 
-## Documentation Index
+## 文档入口
 
-- [Source code archive notes](docs/SOURCE_CODE.md)
-- [Source archive manifest](docs/SOURCE_MANIFEST.md)
-- [Firmware usage notes](docs/FIRMWARE_USAGE.md)
-- [Source verification checklist](docs/SOURCE_VERIFICATION.md)
-- [Assessment evidence checklist](docs/ASSESSMENT_EVIDENCE.md)
-- [Project photos](docs/PHOTOS.md)
-- [Open-source evidence index](docs/OPEN_SOURCE_EVIDENCE.md)
+- [源码压缩包说明](docs/SOURCE_CODE.md)
+- [源码清单](docs/SOURCE_MANIFEST.md)
+- [固件使用说明](docs/FIRMWARE_USAGE.md)
+- [源码检查清单](docs/SOURCE_VERIFICATION.md)
+- [项目照片](docs/PHOTOS.md)
+- [项目维护记录](docs/PROJECT_LOG.md)
+
 ## Source Code
 
 本仓库已补充源码压缩包 `code/ch32v203-single-esc-source-code.zip`，包含单体无刷电调相关固件源码。源码归档说明、SHA256 校验值和打包边界见 `docs/SOURCE_CODE.md`。
